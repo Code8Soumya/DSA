@@ -2,26 +2,18 @@
 using namespace std;
 
 void bs(vector<int> &vec){
-    if(vec.size() == 1){
-        return;
-    }
+    if(vec.size() == 1) return ;
     else{
-        int temp;
-        for(auto i=vec.begin() ; i!=vec.end() ; i++){
-            for(auto j=i+1 ; j!=vec.end() ; j++){
-                if(*i > *j) {
-                    temp = *j;
-                    *j = *i;
-                    *i = temp;
-                }
+        for(int i=0;i<vec.size()-1;i++){
+            for(int j=1 ; j<vec.size()-i ; j++){
+                if(vec[j-1] > vec[j]) swap(vec[j-1],vec[j]);
             }
         }
     }
-
 }
 
 int main(){
-    vector<int> v = {9,8,5,3,2,5,7,4,3,1,5,4,6,8,7,3};
+    vector<int> v = {9,1,8,7,43,6,8,3,67,9,6,5};
     bs(v);
     for(auto i=v.begin() ; i!=v.end() ; i++){
         cout<<*i<<" ";

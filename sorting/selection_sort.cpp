@@ -7,9 +7,9 @@ int main()
     cout << "Input your array size: ";
     cin >> n;
     int arr[n];
-    cout << "Add your elements: "<<endl;
+    cout << "Add your elements: " << endl;
     for (int i = 0; i < n; i++)
-    {   
+    {
         cin >> arr[i];
     }
     cout << "Your unsorted array is: ";
