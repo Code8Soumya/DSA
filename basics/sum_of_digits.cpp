@@ -10,7 +10,7 @@ int main(){
         n/=10;
     }
     if(a==0){
-        cout<<"The sum of the digits in integer "<<a<<" is "<<"1"<<" .";
+        cout<<"The sum of the digits in integer "<<a<<" is "<<0<<" .";
     }
     else{
         cout<<"The sum of the digits in integer "<<a<<" is "<<sum<<" .";
