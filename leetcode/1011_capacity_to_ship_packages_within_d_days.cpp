@@ -22,8 +22,6 @@ int main(){
     return req_days;
 }
 
-
-
 // leetcode
 
 // class Solution {

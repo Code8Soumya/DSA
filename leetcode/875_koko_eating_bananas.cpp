@@ -1,15 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
-int main(){
-    int x;
-    x = 14/15+1;
-    cout<<x;
-    return 0;
-}
-
-
-
 // leetcode
 
 // class Solution {
