@@ -1,0 +1,16 @@
+// leetcode
+
+// class Solution {
+// public:
+//     void postTraverse(TreeNode* node, vector<int> &ans){
+//         if(node==NULL) return;
+//         postTraverse(node->left, ans);
+//         postTraverse(node->right, ans);
+//         ans.push_back(node->val);
+//     }
+//     vector<int> postorderTraversal(TreeNode* root) {
+//         vector<int> ans;
+//         postTraverse(root, ans);
+//         return ans;
+//     }
+// };
