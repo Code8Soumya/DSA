@@ -1,6 +1,6 @@
 // leetcode
 
-
+// better
 // class Solution {
 // public:
 //     int lengthOfLongestSubstring(string s) {
@@ -19,6 +19,27 @@
 //                 i++;
 //             } 
 //             j++;
+//         }
+//         return max_len;
+//     }
+// };
+
+// optimal
+// class Solution {
+// public:
+//     int lengthOfLongestSubstring(string s) {
+//         int n = s.size();
+//         if(n==0) return 0;
+//         int l = 0, r = 0;
+//         int max_len = 0;
+//         vector<int> vis(256, -1);
+//         while(r<n){
+//             if(vis[s[r]] != -1 && l <= vis[s[r]]){
+//                 l = vis[s[r]] + 1;
+//             }
+//             vis[s[r]] = r;
+//             max_len = max(max_len, r-l+1);
+//             r++;
 //         }
 //         return max_len;
 //     }

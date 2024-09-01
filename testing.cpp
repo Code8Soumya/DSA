@@ -2,9 +2,11 @@
 using namespace std;
 
 int main(){
-    vector<int> v(3, 0);
-    v[0]++;
-    v[0]+=5;
-    cout<<v[0];
+    unordered_map<int, int> mpp;
+    mpp[1]++;
+    mpp[2]++;
+    cout<<mpp[1]<<' '<<mpp.size()<<' ';
+    mpp.erase(1);
+    cout<<mpp.size();
     return 0;
 }
