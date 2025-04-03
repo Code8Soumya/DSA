@@ -65,3 +65,46 @@
 // }
 
 
+// recursion + memoization
+
+// class Solution {
+// public:
+//     int rec(int day, int prevActivity, vector<vector<int>> &dp, vector<vector<int>> &arr){
+//         if(day < 0) return 0;
+//         if(dp[day][prevActivity] != -1) return dp[day][prevActivity];
+//         int maxMerit = 0;
+//         for(int currActivity=0 ; currActivity<3 ; currActivity++){
+//             if(currActivity == prevActivity) continue;
+//             maxMerit = max(maxMerit, arr[day][currActivity] + rec(day-1, currActivity, dp, arr));
+//         }
+//         return dp[day][prevActivity] = maxMerit;
+//     }
+//     int maximumPoints(vector<vector<int>> &arr) {
+//         int n = arr.size();
+//         vector<vector<int>> dp(n, vector<int>(4, -1));
+//         return rec(n-1, 3, dp, arr);
+//     }
+// };
+
+
+// tabulation (shifted index)
+
+// class Solution {
+// public:
+//     int maximumPoints(vector<vector<int>> &arr) {
+//         int n = arr.size();
+//         vector<vector<int>> dp(n+1, vector<int>(3, 0));
+//         for(int day=1 ; day<=n ; day++){
+//             for(int currActivity=0 ; currActivity<3 ; currActivity++){
+//                 int maxPoint = 0;
+//                 for(int prevActivity=0 ; prevActivity<3 ; prevActivity++){
+//                     if(currActivity == prevActivity) continue;
+//                     maxPoint = max(maxPoint, arr[day-1][currActivity] + dp[day-1][prevActivity]);
+//                 }
+//                 dp[day][currActivity] = maxPoint;
+//             }
+//         }
+//         return max(dp[n][0], max(dp[n][1], dp[n][2]));
+//     }
+// };
+
