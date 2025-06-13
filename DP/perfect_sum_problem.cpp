@@ -1,4 +1,7 @@
-// recursion + memoization
+// https://www.geeksforgeeks.org/problems/perfect-sum-problem5633/1
+
+
+// memoization
 
 // int rec(int idx, int target, vector<int> &arr, vector<vector<int>> &memo){
 //     if(idx==0){
@@ -24,12 +27,9 @@
 // int perfectSum(vector<int>& arr, int target) {
 //     int n = arr.size();
 //     vector<vector<int>> memo(n, vector<int>(target+1, 0));
-    
 //     if(arr[0] == 0) memo[0][0] = 2;
 //     else memo[0][0] = 1;
-    
 //     if(arr[0] != 0 && arr[0] <= target) memo[0][arr[0]] = 1;
-        
 //     for(int idx=1 ; idx<n ; idx++){
 //         for(int t=0 ; t<=target ; t++){
 //             int not_take = memo[idx-1][t];
@@ -38,6 +38,5 @@
 //             memo[idx][t] = (not_take + take);
 //         }
 //     }
-    
 //     return memo[n-1][target];
 // }

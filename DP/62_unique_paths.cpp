@@ -1,4 +1,7 @@
-// recursion + memoization
+// https://leetcode.com/problems/unique-paths/
+
+
+// memoization
 
 // class Solution {
 // public:
@@ -38,7 +41,7 @@
 // };
 
 
-// tabulation + space optimization
+// space optimization
 
 // class Solution {
 // public:

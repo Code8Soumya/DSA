@@ -1,4 +1,7 @@
-// recursion + memoization
+// https://www.geeksforgeeks.org/problems/subset-sum-problem-1611555638/1
+
+
+// memoization
 
 // bool rec(int idx, int target, vector<vector<int>> &memo, vector<int> &arr){
 //     if(target == 0) return true;
@@ -11,7 +14,6 @@
 //     }
 //     return memo[idx][target] = (not_take || take);
 // }
-
 // bool isSubsetSum(vector<int>& arr, int target) {
 //     int n = arr.size();
 //     vector<vector<int>> memo(n, vector<int>(target+1, -1));
@@ -40,7 +42,7 @@
 // }
 
 
-// tabulation + space optimization
+// space optimization
 
 // bool isSubsetSum(vector<int>& arr, int target) {
 //     int n = arr.size();

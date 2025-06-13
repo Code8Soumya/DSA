@@ -1,4 +1,7 @@
-// recursion + memoization
+// https://leetcode.com/problems/minimum-path-sum/
+
+
+// memoization
 
 // class Solution {
 // public:
@@ -42,7 +45,7 @@
 // };
 
 
-// tabulation + space optimization
+// space optimization
 
 // class Solution {
 // public:

@@ -1,4 +1,7 @@
-// recursion + memoization
+// https://leetcode.com/problems/longest-common-subsequence/
+
+
+// memoization
 
 // int rec(int idx1, int idx2, string &text1, string &text2, vector<vector<int>> &memo){
 //     if(idx1<0 || idx2<0) return 0;
@@ -18,7 +21,7 @@
 // }
 
 
-// recursion + memoization (shifted index)
+// memoization (shifted index)
 
 // int rec(int idx1, int idx2, string &text1, string &text2, vector<vector<int>> &memo){
 //     if(idx1==0 || idx2==0) return 0;
@@ -38,7 +41,7 @@
 // }
 
 
-// tabulation + bottom-up (shifted index)
+// tabulation (shifted index)
 
 // int longestCommonSubsequence(string text1, string text2) {
 //     int n = text1.size();
@@ -60,14 +63,16 @@
 // }
 
 
-// tabulation + bottom-up (shifted index) + space optimization
+// space optimization (shifted index)
 
 // int longestCommonSubsequence(string text1, string text2) {
 //     int n = text1.size();
 //     int m = text2.size();
-//     vector<int> memo(m+1, 0);
+//     vector<int> memo(m+1, -1);
+//     for(int i=0 ; i<=m ; i++) memo[i] = 0;
+//     vector<int> temp(m+1, -1);
+//     temp[0] = 0;
 //     for(int i=1 ; i<=n ; i++){
-//         vector<int> temp(m+1, 0);
 //         int left = 0;
 //         for(int j=1 ; j<=m ; j++){
 //             if(text1[i-1] == text2[j-1]){

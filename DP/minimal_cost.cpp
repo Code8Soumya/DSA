@@ -1,4 +1,7 @@
-// recursion + memoization
+// https://www.geeksforgeeks.org/problems/minimal-cost/1
+
+
+// memoization
 
 // class Solution {
 // public:
@@ -20,7 +23,7 @@
 // };
 
 
-//  tabulation
+// tabulation
 
 // class Solution {
 // public:

@@ -1,4 +1,7 @@
-// recursion + memoization
+// https://www.geeksforgeeks.org/problems/geeks-training/1
+
+
+// memoization
 
 // int rec(vector<vector<int>> &arr, int idx, int last, vector<vector<int>> &memo){
 //     int maxi = 0;
@@ -43,7 +46,7 @@
 // }
 
 
-// tabulation + space optimization
+// space optimization
 
 // int maximumPoints(vector<vector<int>>& arr, int n) {
 //     vector<int> prev(4, 0);
@@ -65,7 +68,7 @@
 // }
 
 
-// recursion + memoization
+// memoization (shifted index)
 
 // class Solution {
 // public:

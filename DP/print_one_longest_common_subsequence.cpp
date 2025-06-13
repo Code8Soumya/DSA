@@ -1,4 +1,4 @@
-// tabulation + shifted index
+// tabulation (shifted index)
 
 // string longest_common_subsequence(string text1, string text2) {
 //     int n = text1.size();

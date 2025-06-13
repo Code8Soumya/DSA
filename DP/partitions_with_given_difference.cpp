@@ -1,4 +1,7 @@
-// recursion + memoization 
+// https://www.geeksforgeeks.org/problems/partitions-with-given-difference/1
+
+
+// memoization 
 
 // solution - 1
 // int rec(int idx, int target, vector<int> &arr, vector<vector<int>> &memo){
@@ -13,7 +16,6 @@
 //     if(arr[idx] <= target) take = rec(idx-1, target-arr[idx], arr, memo);
 //     return memo[idx][target] = (not_take + take);
 // }
-
 // int countPartitions(vector<int>& arr, int d) {
 //     int total_sum = accumulate(arr.begin(), arr.end(), 0);
 //     if((total_sum - d) < 0 || (total_sum - d) % 2 != 0) return 0;
@@ -35,7 +37,6 @@
 //     if(arr[idx] <= target) take = rec(idx-1, target-arr[idx], arr, memo);
 //     return memo[idx][target] = (not_take + take);
 // }
-
 // int countPartitions(vector<int>& arr, int d) {
 //     int total_sum = accumulate(arr.begin(), arr.end(), 0);
 //     if((total_sum - d) < 0 || (total_sum - d) % 2 != 0) return 0;

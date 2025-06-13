@@ -1,23 +1,27 @@
-// recursion + memoization (top-bottom)
+// https://leetcode.com/problems/house-robber/
+
+
+// memoization
 
 // class Solution {
 // public:
 //     int rec(int idx, vector<int> &nums, vector<int> &memo){
-//         if(idx<0) return 0;
-//         if(memo[idx]) return memo[idx];
+//         if(idx == 0) return nums[0];
+//         if(idx == 1) return max(nums[0], nums[1]);
+//         if(memo[idx] != -1) return memo[idx];
 //         int pick = nums[idx] + rec(idx-2, nums, memo);
 //         int not_pick = rec(idx-1, nums, memo);
 //         return memo[idx] = max(pick, not_pick);
 //     }
 //     int rob(vector<int>& nums) {
 //         int n = nums.size();
-//         vector<int> memo(n, 0);
+//         vector<int> memo(n, -1);
 //         return rec(n-1, nums, memo);
 //     }
 // };
 
 
-// tabulation (bottom-up)
+// tabulation
 
 // class Solution {
 // public:
@@ -36,7 +40,7 @@
 // };
 
 
-// tabulation + space optimization (bottom-up)
+// space optimization
 
 // class Solution {
 // public:

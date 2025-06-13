@@ -1,8 +1,10 @@
-// recursion + memoization
+// https://leetcode.com/problems/partition-equal-subset-sum/
+
+
+// memoization
 
 // class Solution {
 // public:
-
 //     bool rec(int idx, int target, vector<vector<int>> &memo, vector<int> &arr){
 //         if(target == 0) return true;
 //         if(idx==0) return (arr[0]==target);
@@ -14,7 +16,6 @@
 //         }
 //         return memo[idx][target] = (not_take || take);
 //     }
-
 //     bool canPartition(vector<int>& nums) {
 //         int n = nums.size();
 //         int total_sum = accumulate(nums.begin(), nums.end(), 0);
@@ -24,7 +25,6 @@
 //         }
 //         return false;
 //     }
-
 // };
 
 
@@ -32,7 +32,6 @@
 
 // class Solution {
 // public:
-
 //     bool canPartition(vector<int>& nums) {
 //         int n = nums.size();
 //         int total_sum = accumulate(nums.begin(), nums.end(), 0);
@@ -53,5 +52,33 @@
 //         }
 //         return memo[n-1][target]; 
 //     }
+// };
 
+
+// space optimization
+
+// class Solution {
+// public:
+//     bool canPartition(vector<int>& nums) {
+//         int n = nums.size();
+//         int total_sum = accumulate(nums.begin(), nums.end(), 0);
+//         if(total_sum % 2 != 0) return false;
+//         int target = total_sum/2;
+//         vector<bool> memo(total_sum, false);
+//         memo[0] = true;
+//         memo[nums[0]] = true;
+//         vector<bool> temp(total_sum, false);
+//         for(int i=1 ; i<n ; i++){
+//             for(int j=1 ; j<=target ; j++){
+//                 int not_take = memo[j];
+//                 int take = 0;
+//                 if(nums[i] <= j){
+//                     take = memo[j-nums[i]];
+//                 }
+//                 temp[j] = (take || not_take);
+//             }
+//             memo = temp;
+//         }
+//         return memo[target]; 
+//     }
 // };

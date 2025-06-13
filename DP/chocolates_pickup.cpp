@@ -1,4 +1,7 @@
-// recursion + memoization
+// https://www.geeksforgeeks.org/problems/chocolates-pickup/1
+
+
+// memoization
 
 // class Solution {
 //     private:
@@ -31,7 +34,7 @@
 // };
 
 
-// Tabulation
+// tabulation
 
 // class Solution {
 //     public:
